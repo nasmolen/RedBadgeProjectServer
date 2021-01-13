@@ -31,9 +31,9 @@ exports.createCampaign = (req, res) => {
         videoURL: req.body.videoURL,
         endDate: req.body.endDate,
         softCap: req.body.softCap,
-        userId: req.user.id
+        userID: req.user.id
     }
-    Campaign.create(rating)
+    Campaign.create(campaign)
         .then(campaign => res.status(200).json(campaign)
         .catch(err => res.status(500).json({error: err })
         ))
