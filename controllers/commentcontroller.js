@@ -30,7 +30,6 @@ exports.createComment = (req, res) => {
         .then(comment => res.status(200).json(comment)
         .catch(err => res.status(500).json({error: err })
         ))
-
 }
             
 exports.editComment = (req, res) => {

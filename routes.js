@@ -16,7 +16,7 @@ router.delete('/campaigns/:id',  validateSession, userController.grantAccess('de
 
 router.get('/comments', commentController.getComments);
 router.get('/getsomecomments', commentController.getSomeComments);
-router.post('/createcomment',  validateSession, userController.grantAccess('createOwn', 'comment'), commentController.createComment);
+router.post('/createcomment/:pageID',  validateSession, userController.grantAccess('createOwn', 'comment'), commentController.createComment);
 router.put('/comments/:id',  validateSession, userController.grantAccess('updateAny', 'comment'), commentController.editComment);
 router.delete('/comments/:id',  validateSession, userController.grantAccess('deleteAny', 'comment'), commentController.deleteComment);
  
